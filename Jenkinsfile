@@ -15,5 +15,10 @@ pipeline {
                 echo 'Hello How Are You?'
             }
         }
+        stage( 'na' ){
+            steps {
+                echo 'Avinash'
+            }
+        }
     }
 }

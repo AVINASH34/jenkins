@@ -13,6 +13,7 @@ pipeline {
         stage('sample stage') {
             steps {
                 echo 'Hello How Are You?'
+                sh sleep 10s
             }
         }
         stage( 'na' ){

@@ -1,17 +1,19 @@
-pipeline{
+pipeline {
     agent any
     options {
         disableResume()
     }
     stages {
-        stage( 'scm' ) 
+        stage('scm') {
             steps {
                 git branch: 'master',
-                       url: 'https://github.com/AVINASH34/jenkins.git'
+                    url: 'https://github.com/AVINASH34/jenkins.git'
             }
-        stage( 'sample stage' )
+        }
+        stage('sample stage') {
             steps {
-                echo ' Hello How Are You? '
+                echo 'Hello How Are You?'
             }
+        }
     }
 }

@@ -4,10 +4,14 @@ pipeline{
         disableResume()
     }
     stages {
-        stage ( 'sample stage' ) 
+        stage( 'scm' ) 
             steps {
-                echo "how are you"
+                git branch: 'master',
+                       url: 'https://github.com/AVINASH34/jenkins.git'
             }
-        
+        stage( 'sample stage' )
+            steps {
+                echo ' Hello How Are You? '
+            }
     }
 }
